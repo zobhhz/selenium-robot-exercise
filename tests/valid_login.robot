@@ -1,28 +1,16 @@
 *** Settings ***
 Documentation   A test suite with a single test for valid login
 ...
-...             This test follows the example using keywords from
-...             the SeleniumLibrary
-
-*** Variables ***
-
-*** Keywords ***
+...             This test is for test case #1.
+Resource        resources.robot
 
 *** Test Cases ***
 Valid Login
-    # open browser
-    Open Browser    https://www.saucedemo.com/    chrome
-    # set window size
-    Maximize Browser Window
-    # check if in login page
-    Page Should Contain Element    login-button
-    # input username
-    Input Text    user-name    standard_user
-    # input password
-    Input Password    password    secret_sauce
-    # click login button
-    Click Button    login-button
-    # should be open in products page
-    Element Text Should Be    class:title    Products
+    # open browser and check if in login
+    Open Login Page
+
+    # input and submit credentials and check if in product page
+    Go To Products Page
+
     # close browser
     [Teardown]    Close Browser

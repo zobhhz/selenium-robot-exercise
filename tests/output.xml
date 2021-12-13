@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.0 on win32)" generated="20211213 23:56:51.637" rpa="false" schemaversion="2">
+<suite id="s1" name="Sorting" source="C:\Users\User\Downloads\GitHub\selenium-robot-exercise\tests\sorting.robot">
+<test id="s1-t1" name="Sort high to low">
+<kw name="Open Login Page" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211213 23:56:51.840" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20211213 23:56:51.840" endtime="20211213 23:56:53.554"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211213 23:56:53.554" endtime="20211213 23:56:53.677"/>
+</kw>
+<kw name="Check if in Login Page" library="resources">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211213 23:56:53.697" level="INFO">Current page contains element 'login-button'.</msg>
+<status status="PASS" starttime="20211213 23:56:53.678" endtime="20211213 23:56:53.697"/>
+</kw>
+<status status="PASS" starttime="20211213 23:56:53.677" endtime="20211213 23:56:53.698"/>
+</kw>
+<status status="PASS" starttime="20211213 23:56:51.840" endtime="20211213 23:56:53.698"/>
+</kw>
+<kw name="Go To Products Page" library="resources">
+<kw name="Input Username" library="resources">
+<arg>${VALID USER}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 23:56:53.701" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20211213 23:56:53.701" endtime="20211213 23:56:53.826"/>
+</kw>
+<status status="PASS" starttime="20211213 23:56:53.700" endtime="20211213 23:56:53.826"/>
+</kw>
+<kw name="Input Passwrd" library="resources">
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 23:56:53.828" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20211213 23:56:53.859" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211213 23:56:53.897" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211213 23:56:53.827" endtime="20211213 23:56:53.897"/>
+</kw>
+<status status="PASS" starttime="20211213 23:56:53.826" endtime="20211213 23:56:53.897"/>
+</kw>
+<kw name="Submit Credentials" library="resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211213 23:56:53.898" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20211213 23:56:53.897" endtime="20211213 23:56:53.978"/>
+</kw>
+<status status="PASS" starttime="20211213 23:56:53.897" endtime="20211213 23:56:53.979"/>
+</kw>
+<kw name="Check if in Products Page" library="resources">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>class:title</arg>
+<arg>PRODUCTS</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211213 23:56:53.979" level="INFO">Verifying element 'class:title' contains exact text 'PRODUCTS'.</msg>
+<status status="PASS" starttime="20211213 23:56:53.979" endtime="20211213 23:56:54.082"/>
+</kw>
+<status status="PASS" starttime="20211213 23:56:53.979" endtime="20211213 23:56:54.082"/>
+</kw>
+<status status="PASS" starttime="20211213 23:56:53.699" endtime="20211213 23:56:54.083"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath://*[@id="header_container"]/div[2]/div[2]/span/select</arg>
+<arg>hilo</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20211213 23:56:54.084" level="INFO">Selecting options from selection list 'xpath://*[@id="header_container"]/div[2]/div[2]/span/select' by value hilo.</msg>
+<status status="PASS" starttime="20211213 23:56:54.084" endtime="20211213 23:56:54.161"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div</arg>
+<arg>Sauce Labs Fleece Jacket</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211213 23:56:54.163" level="INFO">Verifying element 'xpath://html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div' contains exact text 'Sauce Labs Fleece Jacket'.</msg>
+<status status="PASS" starttime="20211213 23:56:54.162" endtime="20211213 23:56:54.192"/>
+</kw>
+<status status="PASS" starttime="20211213 23:56:51.839" endtime="20211213 23:56:54.192"/>
+</test>
+<doc>A test suite with a 3 test cases for invalid login.
+
+This test is for test case #1.</doc>
+<status status="PASS" starttime="20211213 23:56:51.638" endtime="20211213 23:56:54.193"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Sorting">Sorting</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
